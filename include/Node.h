@@ -3,5 +3,5 @@
 struct Node{
 	int key,value;
 	Node* next,prev;
-	Node(int key, int value): key(k), value(v), next(nullptr), prev(nullptr){}
+	Node(int k, int v): key(k), value(v), next(nullptr), prev(nullptr){}
 }
