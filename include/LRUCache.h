@@ -10,10 +10,10 @@ class LRUCache{
 		Node* head_;
 		Node* tail_;
 		int capacity_;
-		std::unordered_map<int,Node*> map;
+		std::unordered_map<int,Node*> map_;
 
 	public:
-		LRUCache(int capacity):capacity_=capacity, head_(new Node(-1,-1)), tail_(new Node(-1,-1)){
+		LRUCache(int capacity):capacity_(capacity), head_(new Node(-1,-1)), tail_(new Node(-1,-1)){
 			std::cout<<"Constructor called!"<<std::endl;
 			head_->next=tail_;
 			tail_->prev=head_;
@@ -35,5 +35,5 @@ class LRUCache{
 		void put(int key, int value);
 		int get(int key);
 		void removeNode(Node* node);
-		void addToFrond(Node* node);
+		void addToFront(Node* node);
 };
